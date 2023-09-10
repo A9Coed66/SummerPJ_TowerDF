@@ -1,0 +1,52 @@
+Những điểm tôi có thể học hỏi từ game khác:
+
+1. Nhiều mini game thú vị (Mihoyo) <Tạm bỏ ở các phiên bản đầu>
+
+2. Hệ thống dispatch hấp dẫn người chơi - cho quà xịn (AL)
+    - Hệ thống dispact hiện tại của các game thông thường khá đơn giản, không thực sự kích thích người chơi
+
+3. Research nâng cấp nhân vật (AL)
+
+4. IS khám phá game (A9): <Tạm bỏ ở các phiên bản đầu game>
+
+5. Game tính toán nhiều (A9)
+
+6. Hòm đồ theo thời gian (Attack on Time)
+
+7. Base (A9):
+    - Phòng nghiên cứu tài liệu chiến đấu
+    - Phòng nghỉ ngơi
+    - Phòng điều khiển robot ngoài vũ trụ - khai thác tài nguyên quy đổi để nâng cấp với tài liệu nghiên cứu
+
+8. Nhân vật phân chia class theo nhiều hướng (A9)
+    - Phân chai theo bộ tộc:
+        Thiên nhiên, các PR đại diện cho loài cây:
+            Thường là nhân vật nữ
+            Hoa anh đào (JP), hoa tuy lip (Hà Lan), hoa hồng, hoa mẫu đơn (TQ), hoa Iris (Pháp), hoa Hướng dương
+            Váy làm bằng cánh hoa luôn
+        Tộc sói
+        Tộc nữ tu
+        Tộc nhà thám hiểm
+        Tộc người
+        Tộc elf
+        Tộc người bay
+        Tộc cuồng nhân
+        Tộc người sống ở vùng tuyết
+        Vô giáo
+    - Phân chia theo hệ sát thương:
+        Sát thương phép
+        Sát thương vật lí
+
+9. Cấp độ thám hiểm (GI)
+    - Căn cứ vào cấp độ thám hiểm có thể chọn từ 0 - 6 nhiệm vụ hàng ngày có thể làm:
+        + Nhiệm vụ thường - thời hạn 2 ngày
+        + Nhiệm vụ khẩn cấp - thời hạn 1 ngày
+        + Nhiệm vụ đặc biệt - chỉ có vào T7, CN
+
+10. Nâng cấp nhân vật bằng cách chọn huấn luyện viên / Thẻ thông tin:
+    Tài liệu chiến đấu thường
+    Tài liệu chiến đấu trung cấp
+    Tài liệu chiến đấu cao cấp
+    Tài liệu chiến đấu mật
+
+11. Tăng trust nhân vật và nhận quà như FGO

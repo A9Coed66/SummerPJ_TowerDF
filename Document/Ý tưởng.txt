@@ -1,0 +1,60 @@
+Thể loại game: tower defense
+
+Mục tiêu game:
+    Kiểu mục tiêu đơn giản
+    1. Khai phá nhiều hành tinh
+    2. Sưu tập và nâng cấp các loại tàu
+    3. Sưu tập và nâng cấp các chỉ huy
+
+Đối tượng người dùng:
+    1. Người yêu thích mô hình máy bay, tàu chiến
+    2. Người hứng thú với thể loại game collect
+
+Vòng lặp người chơi:
+    1. Vòng lặp theo sưu tập và nâng cấp:
+        Sưu tập các mô hình tàu chiến
+        Sưu tập nhân vật theo sự kiện
+    2. Vòng lặp theo sự kiện:
+        Tăng quà tùy theo mỗi event khai phá
+    3. Vòng lặp theo phần thưởng trong ngày:
+        Mỗi lần khai phá sẽ đòi hỏi một lượng tài nguyên nhất định: các nhóm trưởng, bộ lõi
+
+Phần thưởng:
+    Chia thành các mức nhỏ của tàu và chỉ huy để nâng cấp
+    Chỉ huy:
+        Có 10/10/10 đơn vị cấp độ
+        Khuyến khích chỉ tăng lên mức 2 cấp độ 10 và dừng tiến hóa do hiệu quả về chỉ số mang lại sau đó không hiệu quả
+        Các chỉ huy có skill riêng
+    Tàu chiên:
+        Chia ra làm 5 giai đoạn lớn, mỗi gian đoạn lớn gồm 10 giai đoạn nhỏ
+            Khuyến khích người chơi nâng cấp lên giai đoạn 3 cấp độ 10 chứ không đột phá lên cấp 4 do không hiệu quả
+        Skin tàu chiến có thể mua được bằng quà kiếm được từ map farm
+    
+Chỉ huy:
+    Là những người đặc biệt mang đi trong quá trình khai phá
+    Phân loại chỉ huy:
+        Special:
+            Điểm mạnh:
+                Hỗ trợ quá trình lấy tài nguyên nhanh
+                Rẻ
+            Điểm trừ:
+                Các đợt quái sẽ tới sớm
+                Chỉ số thấp
+        Support:
+            Điểm mạnh:
+                Cản trở quá trình tấn công kẻ địch
+                Gây choáng, làm chậm, suy yếu, kiệt sức
+            Điểm trừ:
+                Sát thương thấp, thời gian tái sử dụng lâu
+        Xạ thủ:
+            Điểm mạnh:
+                Dame cao
+            Điểm yếu: tầm hoạt động thấp, thời gian đặt lại lâu
+        Lamp:
+            Điểm mạnh:
+                Rada tầm nhìn rộng hơn 2 lần rada cơ bản
+                Thời gian đặt lại nhanh
+            Điểm yếu:
+                Gần như không có Dame
+                
+
