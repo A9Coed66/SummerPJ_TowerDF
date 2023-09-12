@@ -1,0 +1,155 @@
+Main gameplay:
+    Enemy:
+        HP | DEF | RES | SPD | ATK_SPD | BLOCK
+        Tìm đường() - done
+        Tìm đường bản AI 
+
+        Kiểm tra tấn công():
+            Melee:
+                if (va chạm đồng minh):
+                    if( (Kiểm tra block có thể bị chặn) )
+                        (Update kẻ địch có thể bị chặn (-1))
+                        (Tấn công)
+                else: return
+            Range:
+                if (Kiểm tra có đồng minh trong tầm ()):
+                    (Tấn công(Kẻ địch))
+        
+        Tấn công(Enemy Kẻ địch):
+            Thực hiện gây dame lên kẻ địch
+        
+        Bị tấn công(int sát_thương):
+            HP -= sát_thương
+            Nếu HP<=0:
+                Die()
+        Die():
+            current_node_block +=1
+    BONUS HIỆU ỨNG:
+        TÀNG HÌNH: 
+            không bị thêm vào list FindEnemyInRange() khi chưa bị chặn
+            TÀNG HÌNH = IsBlock()
+        ĐI XUYÊN:
+            BLOCK = 100 :v
+        Đánh sau lưng:
+            Căn cứ vào hướng tấn công
+        Cảm tử:
+            Chạy thẳng vào kẻ địch, nếu bị block lập tức phát nổ Node.GetNodeAround
+        Buff đồng minh xung quanh:
+            Đội trưởng đội bảo mật: Tàng hình
+            Đội trưởng kích thích tinh thần (Xung phong): tăng sát thương, tăng tốc độ
+            Đội trưởng đội thông tin: Giấu thông tin của đồng minh xung quanh
+        
+        
+
+    
+    Node:
+        node_block | char | current_node_block | maxNodeBlock
+        TypeNode <Range?Melee>
+        
+        SetBlock(Quân đồng minh):
+            node_block = quân đồng minh.block
+        
+        GetBuildPosition():
+            return transform.position + positionOffset
+        
+        OnMouseDown()
+        {
+            if (quân đồng minh != null):
+                buildManager.SelectNode(this)
+                return
+            if (!CanUpgrade):
+                return
+            if(!buildManager.CanBuild)
+                return
+            PlaceChar(buildManager.GetTurretToBuild());
+        }
+
+        PlaceChar (Character character):
+            if (chracter.RP < GameManager.RSPoint):
+                currentRP -= char.RP
+                this.char = character
+                UpdateNode()
+
+        UpdateNode():
+            current_node_block = char.block
+        
+        IncreaseBloc(int numBlock):
+            if (maxNodeBlock <= current_node_block + ): return false
+            maxNodeBlock +=1
+            return true
+
+        CheckGearUp(): <Nâng cấp bằng Button>
+            //Tiền điều kiện: ấn vào BUTTON nâng cấp Sử dụng ?clickable
+            //Kiểm tra điều kiện không được Upgrade
+                Chưa có
+
+            //Hàm Upgrade ở char
+            this.char.GearUp()
+            UpdateNode()
+
+        RetreatRS(): thực hiện cho RS rút lui
+            GameManager.RSPoint += round(0.3 * char.RSPoint)
+            RetreatEffect() and Destroy(effect);
+            Destroy(char)
+
+        GetNodeAround():
+            Trả lại vị trí của các Node liền kề
+    
+    CharacterBlueprint:
+        GameObject prefab (Để lưu GameObject Character) | RSPoint <Phải sửa đống trên thôi ._.)
+        GameOBject upgradePrefab <Không biết có nên thêm hom nữa -_->
+
+    Character:
+        RSPoint | HP | DEF | RES | ATK_SPD | BLOCK |BlockingEnemy
+        SKILL | SKILL POINT <Dự đoán skill là ScriptTableObject
+        Hướng tấn công | Vùng tấn công | Thời gian vào lại trận
+
+        Hướng tấn công lưu List<Node>
+
+        Khi ở thanh trạng thái:
+            Xử lí dữ liệu ở button sao cho đủ RSPoint thì Enable chọn bằng cách Highlight
+
+        Update:
+            Từ Node đang đứng kiểm tra có kẻ địch hay không
+                Nếu có thì attack theo thứ tự kẻ địch gặp mặt
+                Nếu dame AOE thì tẩn hết ko chừa bố con thằng nào
+
+        
+        Dame():
+            Cho kẻ thù TakeDamage
+        
+        TakeDamage:
+            Mình ăn dame
+        
+        
+        
+    
+    SKill:
+        Update:
+            currentSkillPoint += Time.deltaTime;
+            if (isManual):
+                if currentSkillPoint>=NeededSkillPoint:
+                    SkillACtive()
+        
+        SkillActive() <Tất nhiên nếu phải nhấn thủ công ta ko cần hàm gì mà cứ thế tống vào Button thôi>
+
+    
+    Button:
+        Char |
+        Nếu GameManager.RSPoint > Char.RSPoint: thì enable Highlight
+
+        OnClick(): 
+            Highlight()
+            GameManager.chooseChar = Char
+
+        Highlight(bool b):
+            Làm cho nổi bật so với các ô chưa được chọn
+            if(b):
+                setactive layer highlight
+                return
+            //Thực hiện ngược trên
+        
+    Hỗ trợ thuật toán tìm đường AI
+        Lưu vị trí các điểm giao bởi CÂY (TREE)
+        Vị trí mà BLOCK_CHẶN đặt sẽ cắt một đoạn của đồ thị này
+        Sử dụng thuật toán tìm đường dựa trên các NODE vô hướng

@@ -1,0 +1,4 @@
+1.  Tạo scene phụ thực hiện (quản lí animation) Character trên range tấn công kẻ địch đi qua
+    Tạo (map) đơn giản phân loại (melee và range)
+    Viết sơ bộ code
+    
